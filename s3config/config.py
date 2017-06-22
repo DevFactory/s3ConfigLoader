@@ -12,6 +12,7 @@ from s3config import uri_manager
 # ******************************
 
 logger = logging.getLogger(__name__)
+DEFAULT = object()
 
 
 class Config:
@@ -39,9 +40,11 @@ class Config:
             print("unable to find secrets uri")
             raise Exception("unable to find secrets url...")
 
-    def get_value(self, key):
+    def get_value(self, key, default_value=DEFAULT):
         if key in self.secrets:
             return self.secrets[key]
+        if default_value != DEFAULT:
+            return default_value
         raise Exception("missing property in secrets.yml [%s]" % key)
 
     @staticmethod
