@@ -1,0 +1,6 @@
+.idea
+secrets.yml
+
+/venv/
+/dist/
+/S3ConfigLoader.egg-info/
