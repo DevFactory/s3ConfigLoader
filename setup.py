@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="S3ConfigLoader",
-    version="0.1.3",
+    version="0.1.4",
     packages=find_packages(),
     install_requires=['boto3', 'pyyaml'],
 
@@ -10,7 +10,7 @@ setup(
     author="Rahul Subramaniam",
     author_email="rahulsub@gmail.com    ",
     description="""This package implements a simple config property loader 
-    that can read property files from local or from amazon AWS S2""",
+    that can read property files from local or from amazon AWS S3""",
     license="PSF",
     keywords="property configuration loader",
 
